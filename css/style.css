@@ -1,0 +1,41 @@
+.header-index {
+width: 100%;
+color: white;
+padding: 1%;
+
+}
+
+.logo {
+width: 150px;
+margin-left: auto;
+margin-right: auto;
+}
+
+.text {
+    font-size: 80px;
+    text-align: center;
+    }
+
+.carrousel {
+    margin: auto;
+    width: 600px;
+    height: 300px;
+    padding: 10px;
+}
+
+.h2 {
+    text-align: center;
+}
+.text1 {
+    width: 600px;
+    margin: auto;
+    font-size: medium;
+    text-align: justify;
+}
+
+.form {
+    width: 80%;
+    margin: auto;
+    font-size: medium;
+    padding: 20px;
+}
