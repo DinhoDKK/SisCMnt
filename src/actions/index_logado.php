@@ -29,7 +29,7 @@ if (!empty($_GET['meus_historicos']) && $_GET['meus_historicos'] == 1) {
 
     if ($stmt->execute($dados)) {
       // Execução da SQL Ok!!
-      $anuncios = $stmt->fetchAll();
+      $historico = $stmt->fetchAll();
     }
     else {
       die("Falha ao executar a SQL.. #1");
@@ -43,7 +43,7 @@ if (!empty($_GET['meus_historicos']) && $_GET['meus_historicos'] == 1) {
     $stmt = $pdo->prepare($sql);
     if ($stmt->execute()) {
       // Execução da SQL Ok!!
-      $anuncios = $stmt->fetchAll();
+      $historico = $stmt->fetchAll();
 
       /*
       echo '<pre>';
@@ -95,10 +95,10 @@ if (!empty($_GET['meus_historicos']) && $_GET['meus_historicos'] == 1) {
       <a href="../pages/user/cad_historico.php" class="btn btn-primary">Novo Histórico</a>
       <a href="index_logado.php?meus_historicos=1" class="btn btn-success">Meus Histórico</a>
       <a href="index_logado.php?meus_historicos=0" class="btn btn-info">Todos Históricos</a>
-      <a href="logout.php" class="btn btn-dark">Sair</a>
+      <a href="../actions/logout.php" class="btn btn-dark">Sair</a>
     </div>
 
-    <?php if (!empty($anuncios)) { ?>
+    <?php if (!empty($historico)) { ?>
       <!-- Aqui que será montada a tabela com a relação de anúncios!! -->
       <div class="container">
         <table class="table table-striped">
@@ -129,26 +129,34 @@ if (!empty($_GET['meus_historicos']) && $_GET['meus_historicos'] == 1) {
             </tr>
           </thead>
           <tbody>
-            <?php foreach ($anuncios as $a) { ?>
+            <?php foreach ($historico as $a) { ?>
               <tr>
-                <th scope="row"><?php echo $a['id']; ?></th>
+                <th scope="row"><?php echo $a['id_historico']; ?></th>
+                <td><?php echo $a['numpat']; ?></td>
+                <td><?php echo $a['nome']; ?></td>
+                <td><?php echo $a['grupo']; ?></td>
+                <td><?php echo $a['dataindisp']; ?></td>
+                <td><?php echo $a['cidade']; ?></td>
+                <td><?php echo $a['empresa']; ?></td>
+                <td><?php echo $a['ommnt']; ?></td>
+                <td><?php echo $a['situacao']; ?></td>
+                <td><?php echo $a['realizacaoservicao']; ?></td>
+                <td><?php echo $a['prioridade']; ?></td>
+                <td><?php echo $a['conduso']; ?></td>
+                <td><?php echo $a['suprimento']; ?></td>
+                <td><?php echo $a['custo']; ?></td>
+                <td><?php echo $a['descricao']; ?></td>
+                <td><?php echo $a['solucao']; ?></td>
+                <td><?php echo $a['datatermino']; ?></td>
+                <td><?php echo $a['valorsv']; ?></td>
+                <td><?php echo $a['valormat']; ?></td>
+                <td><?php echo $a['odmtinicial']; ?></td>
+                <td><?php echo $a['odmtfinal']; ?></td>
+                <td><?php echo $a['os']; ?></td>
                 <td>
-                  <?php
-                    if ($a['fase'] == 'A') {
-                      echo "Adulto";
-                    } else {
-                      echo "Filhote";
-                    }
-                  ?>
-                </td>
-                <td><?php echo $a['tipo'] == 'G' ? "Gato" : "Cachorro"; ?></td>
-                <td><?php echo $a['pelagem_cor']; ?></td>
-                <td><?php echo $a['raca']; ?></td>
-                <td><?php echo $a['sexo'] == 'M' ? "Macho" : "Fêmea"; ?></td>
-                <td>
-                  <?php if ($a['email_usuario'] == $_SESSION['email']) { ?>
-                    <a href="alt_anuncio.php?id_anuncio=<?php echo $a['id']; ?>" class="btn btn-warning">Alterar</a>
-                    <a href="del_anuncio.php?id_anuncio=<?php echo $a['id']; ?>" class="btn btn-danger">Excluir</a>
+                  <?php if ($a['identidade_usuario'] == $_SESSION['identidade']) { ?>
+                    <a href="../pages/user/alt_anuncio.php?id_anuncio=<?php echo $a['id_historico']; ?>" class="btn btn-warning">Alterar</a>
+                    <a href="../pages/user/del_anuncio.php?id_anuncio=<?php echo $a['id_historico']; ?>" class="btn btn-danger">Excluir</a>
                   <?php } ?>
                 </td>
               </tr>

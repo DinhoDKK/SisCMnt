@@ -72,11 +72,11 @@ if (!empty($_POST)) {
         // Tentar Executar a SQL (INSERT)
         // Realizar a inserção das informações no BD (com o PHP)
         if ($stmt->execute($dados)) {
-          header("Location: ../../index_logado.php?msgSucesso=Histórico cadastrado com sucesso!");
+          header("Location: index_logado.php?msgSucesso=Histórico cadastrado com sucesso!");
         }
     } catch (PDOException $e) {
         die($e->getMessage());
-        header("Location: ../../index_logado.php?msgErro=Falha ao cadastrar histórico..");
+        header("Location: index_logado.php?msgErro=Falha ao cadastrar histórico..");
     }
   }
   elseif ($_POST['enviarDados'] == 'ALT') { // ALTERAR!!!
@@ -145,14 +145,14 @@ if (!empty($_POST)) {
 
       // Executar SQL
       if ($stmt->execute($dados)) {
-        header("Location: ../../index_logado.php?msgSucesso=Alteração realizada com sucesso!!");
+        header("Location: index_logado.php?msgSucesso=Alteração realizada com sucesso!!");
       }
       else {
-        header("Location: ../../index_logado.php?msgErro=Falha ao ALTERAR anúncio..");
+        header("Location: index_logado.php?msgErro=Falha ao ALTERAR anúncio..");
       }
     } catch (PDOException $e) {
       //die($e->getMessage());
-      header("Location: ../../index_logado.php?msgErro=Falha ao ALTERAR anúncio..");
+      header("Location: index_logado.php?msgErro=Falha ao ALTERAR anúncio..");
     }
 
   }
@@ -167,22 +167,22 @@ if (!empty($_POST)) {
       $dados = array(':id_historico' => $_POST['id_historico'], ':identidade' => $_SESSION['identidade']);
 
       if ($stmt->execute($dados)) {
-        header("Location: ../../index_logado.php?msgSucesso=Histórico excluído com sucesso!!");
+        header("Location: index_logado.php?msgSucesso=Histórico excluído com sucesso!!");
       }
       else {
-        header("Location: ../../index_logado.php?msgSucesso=Falha ao EXCLUIR histórico..");
+        header("Location: index_logado.php?msgSucesso=Falha ao EXCLUIR histórico..");
       }
     } catch (PDOException $e) {
       //die($e->getMessage());
-      header("Location: ../../index_logado.php?msgSucesso=Falha ao EXCLUIR histórico..");
+      header("Location: index_logado.php?msgSucesso=Falha ao EXCLUIR histórico..");
     }
   }
   else {
-    header("Location: ../../index_logado.php?msgErro=Erro de acesso (Operação não definida).");
+    header("Location: index_logado.php?msgErro=Erro de acesso (Operação não definida).");
   }
 }
 else {
-  header("Location: ../../index_logado.php?msgErro=Erro de acesso.");
+  header("Location: index_logado.php?msgErro=Erro de acesso.");
 }
 die();
 

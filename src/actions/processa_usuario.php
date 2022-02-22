@@ -18,7 +18,7 @@ if (!empty($_POST)) {
       $sql = "INSERT INTO usuarios
                 (nome, nomeGuerra, identidade, email, senha)
               VALUES
-                (:nome, :nomeGuerra, :identidade, :email, :senha)";
+                (:nome, :nomeguerra, :identidade, :email, :senha)";
 
       // Preparar a SQL (pdo)
       $stmt = $pdo->prepare($sql);
@@ -26,7 +26,7 @@ if (!empty($_POST)) {
       // Definir/organizar os dados p/ SQL
       $dados = array(
         ':nome' => $_POST['nome'],
-        ':nomeGuerra' => $_POST['nomeGuerra'],
+        ':nomeguerra' => $_POST['nomeGuerra'],
         ':identidade' => $_POST['identidade'],
         ':email' => $_POST['email'],
         ':senha' => md5($_POST['senha'])
