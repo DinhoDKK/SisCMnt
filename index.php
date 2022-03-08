@@ -7,8 +7,20 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   </head>
   <body class="text-center">
+      <header>
+  <div class="header-index bg-success">
+    <div class="row justify-content-md-center">
+      <div class="logo text col">
+        <img src="img/logo1.png" width="60" heigth="120">
+        <b>SisCMnt</b>
+        <img src="img/matbel.png" width="60" heigth="150">
+    </div>
+      </div>
+    </div>
+  </div>
+</header>
 
-      <div class="container">
+<div class="container">
         <?php if (!empty($_GET['msgErro'])) { ?>
         <div class="alert alert-warning" role="alert">
         <?php echo $_GET['msgErro']; ?>
@@ -23,51 +35,8 @@
       </div>
 
     <div class="d-flex justify-content-center">
-      
-          <div class="carrousel">
-            <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-
-              <div class="carousel-indicators">
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
-                  aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-              </div>
-
-              <div class="carousel-inner">
-
-                <div class="carousel-item active">
-                  <img src="img/slide1.jpg">
-                </div>
-
-                <div class="carousel-item">
-                  <img src="img/slide2.jpg">
-                </div>
-
-                <div class="carousel-item">
-                  <img src="img/slide3.jpg">
-                </div>
-
-              </div>
-
-              <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-              </button>
-
-              <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-              </button>
-
-            </div>
-          </div>
                   
-                
-                                    
           <form action="./src/actions/processa_login.php" method="post">
-
-            <img class="mb-4" src="img/logo1.png" alt="" width="72" height="57">
                             
             <h1 class="h3 mb-3 fw-normal">Login</h1>
 

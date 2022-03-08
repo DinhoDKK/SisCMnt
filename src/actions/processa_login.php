@@ -1,12 +1,6 @@
 <?php
 require_once '../../src/database/conectaBD.php';
 // Conectar ao BD (com o PHP)
-/*
-echo '<pre>';
-print_r($_POST);
-echo '</pre>';
-die();
-*/
 
 // Verificar se está chegando dados por POST
 if (!empty($_POST)) {
@@ -14,7 +8,7 @@ if (!empty($_POST)) {
   session_start();
   try {
     // Montar a SQL
-    $sql = "SELECT nome, nomeGuerra, identidade FROM usuarios WHERE identidade = :identidade AND senha = :senha";
+    $sql = "SELECT * FROM usuarios WHERE identidade = :identidade AND senha = :senha";
 
     // Preparar a SQL (pdo)
     $stmt = $pdo->prepare($sql);
@@ -38,10 +32,27 @@ if (!empty($_POST)) {
       $_SESSION['nome'] = $result['nome'];
       $_SESSION['email'] = $result['email'];
       $_SESSION['identidade'] = $result['identidade'];
-      $_SESSION['nomeGuerra'] = $result['nomeGuerra'];
+      $_SESSION['nomeguerra'] = $result['nomeguerra'];
+      $_SESSION['posto'] = $result['posto'];
+      $_SESSION['perfil'] = $result['perfil'];
 
       // Redirecionar p/ página inicial (ambiente logado)
-      header("Location: ../../src/actions/index_logado.php");
+    if ($_SESSION['perfil'] == "Fiscal Administrativo"){
+      header("Location: ../../src/actions/index_fisc.php");
+    }
+    if ($_SESSION['perfil'] == "Encarregado de Material"){
+      header("Location: ../../src/actions/index_encmat.php");
+    }
+    if ($_SESSION['perfil'] == "Encarregado da Garagem"){
+      header("Location: ../../src/actions/index_encgar.php");
+    }
+    if ($_SESSION['perfil'] == "Aux. Cl VII"){
+      header("Location: ../../src/actions/index_clvii.php");
+    }
+    if ($_SESSION['perfil'] == "Aux. Cl V"){
+      header("Location: ../../src/actions/index_clv.php");
+    }
+      //header("Location: ../../src/actions/index_logado.php");
 
     } else { // Signifca que o resultado da consulta SQL não trouxe nenhum registro
       // Falha na autenticaçao
