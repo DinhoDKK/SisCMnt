@@ -26,19 +26,40 @@
             <input type="text" name="nomeGuerra" id="nomeGuerra" class="form-control">
             </div>
 
+            <div class="col-md-6">
+                    <label for="om" class="form-label">Posto/Graduação</label>
+                    <select id="om" name="om" class="form-select">
+                    <option selected></option>
+                    <option>Cb</option>
+                    <option>3º SGT</option>
+                    <option>2º SGT</option>
+                    <option>1º SGT</option>
+                    <option>ST</option>
+                    <option>2º TEN</option>
+                    <option>1º TEN</option>
+                    <option>CAP</option>
+                    <option>MAJ</option>
+                    </select>
+                </div>
+
             <div class="col-md-4">
-            <label for="posto">Posto / Graduação</label>
-            <input type="text" name="posto" id="posto" class="form-control">
-            </div>
+                    <label for="om" class="form-label">OM</label>
+                    <select id="om" name="om" class="form-select">
+                    <option selected></option>
+                    <option>9º B SUP</option>
+                    <option>9º B MNT</option>
+                    <option>9º GPT LOG</option>
+                    <option>18º B TRNSP</option>
+                    <option>9º B SAU</option>
+                    </select>
+                </div>
 
             <div class="col-md-6">
                     <label for="perfil" class="form-label">Perfil</label>
                     <select id="perfil" name="perfil" class="form-select">
-                    <option selected>Fiscal Administrativo</option>
-                    <option selected>Encarregado de Material</option>
-                    <option selected>Encarregado da Garagem</option>
-                    <option selected>Aux. Cl VII</option>
-                    <option selected>Aux. Cl V</option>
+                    <option selected></option>
+                    <option>Fiscal Administrativo</option>
+                    <option>Encarregado de Material</option>
                     </select>
                 </div>
 
@@ -52,7 +73,7 @@
             <input type="email" name="email" id="email" class="form-control">
             </div>
 
-            <div class="col-md-5">
+            <div class="col-md-4">
             <label for="senha">Senha</label>
             <input type="password" name="senha" id="senha" class="form-control">
             </div>

@@ -18,7 +18,7 @@ margin-right: auto;
 
 .carrousel {
     margin: auto;
-    width: 800px;
+    width: 1000px;
     height: 300px;
     padding: 10px;
 }
@@ -33,12 +33,6 @@ margin-right: auto;
     text-align: justify;
 }
 
-.form {
-    width: 80%;
-    margin: auto;
-    font-size: medium;
-    padding: 20px;
-}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,

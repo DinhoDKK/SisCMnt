@@ -6,7 +6,7 @@ session_start();
 if (empty($_SESSION)) {
   // Significa que as variáveis de SESSAO não foram definidas.
   // Não poderia acessar aqui.
-  header("Location: ../../index.php?msgErro=Você precisa se autenticar no sistema.");
+  header("Location: index.php?msgErro=Você precisa se autenticar no sistema.");
   die();
 }
 
@@ -16,7 +16,7 @@ echo '<pre>';
 print_r($_SESSION);
 print_r($_GET);
 echo '</pre>';
-die();
+//die();
 */
 
 $result = array();
@@ -25,7 +25,8 @@ $result = array();
 if (!empty($_SESSION)) {
 
     // Buscar as informações do anúncio a ser alterado (no banco de dados)
-  $sql = "SELECT * FROM usuarios WHERE identidade = :identidade AND id = :id";
+  $sql = "SELECT * FROM usuarios WHERE identidade = :identidade";
+
   try {
     $stmt = $pdo->prepare($sql);
 
@@ -33,7 +34,7 @@ if (!empty($_SESSION)) {
                           ':nome'  => $_SESSION['nome'],
                           ':email'  => $_SESSION['email'], 
                           ':nomeguerra' => $_SESSION['nomeguerra'], 
-                          ':perfil' => $_SESSION['perfil'],));
+                          ':perfil' => $_SESSION['perfil']));
 
     // Verificar se o usuário logado pode acessar/alterar as informações desse registro (id_anuncio)
     if ($stmt->rowCount() == 1) {

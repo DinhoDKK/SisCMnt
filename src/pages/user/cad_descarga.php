@@ -110,65 +110,13 @@ die();
                 </select>
             </div>
 
-            <div class="col-md-4">
-              <label for="dataIndisponibilidade" class="form-label">Data (Início da indisponibilidade)</label>
-              <input type="date" class="form-control" id="dataIndisponibilidade" name="dataIndisponibilidade">
-            </div>
-
-            <div class="col-md-6">
-                <label for="matMnt" class="form-label">Material em manutenção?</label>
-                <select id="matmnt" name="matmnt" class="form-select">
-                <option selected></option>
-                  <option>Sim</option>
-                  <option>Não</option>
-                </select>
-            </div>
-
-            <div class="col-md-4">
-                <label for="locmnt" class="form-label">Local da manutenção</label>
-                <select id="locmnt" name="locmnt" class="form-select">
-                <option selected></option>
-                  <option>Propria OM</option>
-                  <option>OM de Apoio</option>
-                  <option>Empresa Civil</option>
-                </select>
-            </div>
-
-            <div class="col-md-5">
-                <label for="nomeempresa" class="form-label">Nome da empresa (caso seja civil)</label>
-                <input type="text" class="form-control" id="nomeempresa" name="nomeempresa">
-              </div>
-
-              <div class="col-md-5">
-                <label for="ommnt" class="form-label">OM de manutenção</label>
-                <select id="ommnt" name="ommnt" class="form-select">
-                <option selected></option>
-                  <option>9º B Mnt</option>
-                  <option>9º BECmb</option>
-                  <option>3º Gpt Eng</option>
-                </select>
-            </div>
-
-            <div class="col-md-5">
-              <label for="dataini" class="form-label">Data Inicio(que o material saiu para manutenção)</label>
-              <input type="date" class="form-control" id="dataini" name="dataini">
-            </div>
-
-            <div class="col-md-5">
-              <label for="datafim" class="form-label">Data Fim(que o material voltou da manutenção)</label>
-              <input type="date" class="form-control" id="datafim" name="datafim">
-            </div>
-          
-
-
-
             <div class="col-md-10">
-              <label for="motivo" class="form-label">Motivo da indisponibilidade</label>
-              <textarea class="form-control" id="motivo" name="motivo" rows="5" cols="50"></textarea>
+              <label for="motivodescarga" class="form-label">Motivo da descarga</label>
+              <textarea class="form-control" id="motivodescarga" name="motivodescarga" rows="5" cols="50"></textarea>
             </div>
 
             <div class="col-md-10 btn">
-            <button type="submit" name="enviarDados" class="btn btn-primary" value="CAD">Cadastrar</button>
+            <button type="submit" name="enviarDados" class="btn btn-primary" value="CADDESC">Cadastrar</button>
             </div>
     </form>
    

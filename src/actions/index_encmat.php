@@ -30,42 +30,10 @@ if (empty($_SESSION)) {
         </div>
     </div>
     
-    
-           <!--
-          <ul class="nav nav-tabs">
-          <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../pages/user/index_encmat.php">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="../pages/user/alt_senha.php">Alterar Senha</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../pages/user/cad_clii.php">Cadastro Material CL II</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Atualizar disponibilidade de MEM</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link">Informar MEM em Mnt</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Informar Descarga de MEM</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Verificar disp. por CL (II e V)</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../actions/logout.php">Sair</a>
-              </li>
-            </ul>
-            
-            <iframe src="menu_lateral.php" name="leftFrame" width="20%" height="800px"></iframe>
-            <iframe src="inicio.php" name="inicio" width="90%" height="800px"></iframe>
-            -->
             <table width="100%" height="100%" align="center">
 
                 <tr valign="top">
-                  <td valign="top"><iframe src="menu_lateral.php" name="leftFrame" width="320px" height="800px" frameborder="1"></iframe></td>
+                  <td valign="top"><iframe src="menu_lateral_encmat.php" name="leftFrame" width="320px" height="800px" frameborder="1"></iframe></td>
                   <td width="100%" valign="top"><iframe src="inicio.php" scrolling = "yes" name="mainFrame" width="100%" height="100%" frameborder="0"></iframe></td> 
                 </tr>
             </table>

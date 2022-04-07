@@ -43,15 +43,6 @@ if (!empty($_POST)) {
     if ($_SESSION['perfil'] == "Encarregado de Material"){
       header("Location: ../../src/actions/index_encmat.php");
     }
-    if ($_SESSION['perfil'] == "Encarregado da Garagem"){
-      header("Location: ../../src/actions/index_encgar.php");
-    }
-    if ($_SESSION['perfil'] == "Aux. Cl VII"){
-      header("Location: ../../src/actions/index_clvii.php");
-    }
-    if ($_SESSION['perfil'] == "Aux. Cl V"){
-      header("Location: ../../src/actions/index_clv.php");
-    }
       //header("Location: ../../src/actions/index_logado.php");
 
     } else { // Signifca que o resultado da consulta SQL não trouxe nenhum registro

@@ -13,10 +13,10 @@
                 <div class="carousel-item active">
                     <img src="../../img/slide1.jpg">
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item active">
                     <img src="../../img/slide2.jpg">
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item active">
                     <img src="../../img/slide3.jpg">
                 </div>
             </div>
