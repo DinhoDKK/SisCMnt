@@ -8,6 +8,44 @@ if (empty($_SESSION)) {
   header("Location: index.php?msgErro=Você precisa se autenticar no sistema.");
   die();
 }
+/*
+echo '<pre>';
+print_r($_POST);
+print_r($_SESSION);
+echo '</pre>';
+die();
+*/
+$escolha = $_POST['escolhaclasse'];
+
+$materiais = array();
+
+
+  if(!empty($_POST['escolhaclasse'])){
+    $sql = "SELECT * FROM matclii WHERE clmat = '$escolha' ORDER BY id_matclii ASC";
+    try {
+      $stmt = $pdo->prepare($sql);
+      if ($stmt->execute()) {
+        // Execução da SQL Ok!!
+        $materiais = $stmt->fetchAll();
+
+         /*
+        echo '<pre>';
+        print_r($materiais);
+        echo '</pre>';
+        die();
+        */
+        
+  
+      }else {
+        die("Falha ao executar a SQL.. #2");
+      }
+  
+    } catch (PDOException $e) {
+      die($e->getMessage());
+    }
+  }else 
+    echo 'Não existem materiais nesta classe!'
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -27,64 +65,6 @@ if (empty($_SESSION)) {
     }
   </style>
 
-                <div class="col-md-6" style="text-align: center;">
-                    <label for="perfil" class="form-label">Escolha a classe</label>
-                    <select id="escolhaclasse" name="escolhaclasse" class="form-select">
-                    <option selected></option>
-                    <option>CL II</option>
-                    <option>Cl V</option>
-                    <option>Cl IX</option>
-                    </select>
-                </div>
-
-<?php
-
-$materiais = array();
-$escolha = $_GET['escolhaclasse'];
-
-if (!empty($_GET['meus_materiais']) && $_GET['meus_materiais'] == 1 && $escolha != null) {
-    // Obter somente os materiais cadastrados pelo(a) usuário(a) logado(a).
-    $sql = "SELECT * FROM matclii WHERE identidade_usuario = :identidade ORDER BY id_matclii ASC";
-    $dados = array(':identidade' => $_SESSION['identidade']);
-  
-    try {
-      $stmt = $pdo->prepare($sql);
-  
-      if ($stmt->execute($dados)) {
-        // Execução da SQL Ok!!
-        $materiais = $stmt->fetchAll();
-      }
-      else {
-        die("Falha ao executar a SQL.. #1");
-      }
-    } catch (PDOException $e) {
-      die($e->getMessage());
-    }
-  } else {
-    $sql = "SELECT * FROM matclii WHERE clmat = :escolhaclasse ORDER BY id_matclii ASC";
-    try {
-      $stmt = $pdo->prepare($sql);
-      if ($stmt->execute()) {
-        // Execução da SQL Ok!!
-        $materiais = $stmt->fetchAll();
-  
-        
-        echo '<pre>';
-        print_r($materiais);
-        echo '</pre>';
-        die();
-        
-      }
-      else {
-        die("Falha ao executar a SQL.. #2");
-      }
-  
-    } catch (PDOException $e) {
-      die($e->getMessage());
-    }
-  }
-
-?>
 
 <body>
   

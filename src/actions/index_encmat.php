@@ -20,7 +20,7 @@ if (empty($_SESSION)) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   </head>
   <body>
-  <iframe src="header.php" name="logo" width="100%" height="145px"></iframe>
+  <iframe src="header.php" name="logo" width="100%" height="148px"></iframe>
     <div class="row text-center bg-success">
         <div class="col-md-5"> 
           <p><h5><?php echo $_SESSION['posto']?>  <?php echo $_SESSION['nomeguerra'] ; ?> </h5></p>

@@ -36,7 +36,7 @@
                       </li>
 
                       <li>
-                        <a href="../pages/user/ver_mat_cl.php" target="mainFrame"><i class="fa fa-dashboard fa-lg"></i>Relação de materiais por classe</a>
+                        <a href="../pages/user/pesq_cl.php" target="mainFrame"><i class="fa fa-dashboard fa-lg"></i>Relação de materiais por classe</a>
                       </li>
 
                       <li>
@@ -45,10 +45,6 @@
 
                       <li>
                         <a href="../pages/user/pedido_descarga.php" target="mainFrame"><i class="fa fa-dashboard fa-lg"></i> Verificar pedidos de descarga</a>
-                      </li>
-
-                      <li>
-                        <a href="../pages/user/alterar_senha.php" target="mainFrame"><i class="fa fa-dashboard fa-lg"></i> Alterar Senha</a>
                       </li>
                       
                       <li>

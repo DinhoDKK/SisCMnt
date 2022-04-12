@@ -42,10 +42,6 @@
                       <li>
                         <a href="../pages/user/ver_mat.php" target="mainFrame"><i class="fa fa-dashboard fa-lg"></i> Verificar meus materiais</a>
                       </li>
-
-                      <li>
-                        <a href="../pages/user/alterar_senha.php" target="mainFrame"><i class="fa fa-dashboard fa-lg"></i> Alterar Senha</a>
-                      </li>
                       
                       <li>
                         <a href="../actions/logout.php" target="_parent"><i class="fa fa-dashboard fa-lg"></i> Sair</a>

@@ -89,12 +89,6 @@ if (!empty($_GET['meus_materiais']) && $_GET['meus_materiais'] == 1) {
                 </div>
               <?php } ?>
             </div>
-    
-    
-    <div>
-        <input type="text" name="pesquisamat" id="pesquisamat">
-        <button type="button" class="btn bnt-success">Pesquisar</button>
-    </div>
             
     <?php if (!empty($materiais)) { ?>
 
