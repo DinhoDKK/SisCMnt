@@ -15,21 +15,21 @@ if (empty($_SESSION)) {
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Página Inicial - Ambiente Logado</title>
+    <title>Página Inicial - SisCMnt</title>
     <link href="../../css/style.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-  </head>
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+</head>
+
   <body>
-  <iframe src="header.php" name="logo" width="100%" height="148px"></iframe>
-    <div class="row text-center bg-success">
-        <div class="col-md-5"> 
-          <p><h5><?php echo $_SESSION['posto']?>  <?php echo $_SESSION['nomeguerra'] ; ?> </h5></p>
+  <iframe src="header.php" name="logo" scrolling = "no" width="100%" height="148px"></iframe>
+  <div class="row text-center bg-success">
+        <div class="col-md-6"> 
+          <p><h5>Posto/Grad.: <?php echo $_SESSION['posto']?>  <?php echo $_SESSION['nomeguerra'] ; ?> </h5></p>
         </div>
-        <div class="col-md-5"> 
-          <p><h5><?php echo $_SESSION['perfil']; ?></h5></p>
+        <div class="col-md-6"> 
+          <p><h5>Perfil: <?php echo $_SESSION['perfil']; ?></h5></p>
         </div>
     </div>
-    
             <table width="100%" height="100%" align="center">
 
                 <tr valign="top">
@@ -38,5 +38,5 @@ if (empty($_SESSION)) {
                 </tr>
             </table>
   </body>
-
+  <iframe src="footer.php" name="footer" width="100%" height="148px">
 </html>

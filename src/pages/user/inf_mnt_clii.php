@@ -71,9 +71,11 @@ else {
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Alterar Anúncio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-  </head>
+    <title>Informar Mnt</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+  <link rel="stylesheet" href="../../../bootstrap/css/bootstrap.min.css">
+</head>
+
   <body>
     <div class="container">
       <h1>Alterar Material</h1>

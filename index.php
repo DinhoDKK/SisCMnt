@@ -4,21 +4,10 @@
     <meta charset="utf-8">
     <title>SisCMnt</title>
     <link rel="stylesheet" href="./css/stylelogin.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
   </head>
   <body class="text-center">
-      <header>
-  <div class="header-index bg-success">
-    <div class="row justify-content-md-center">
-      <div class="logo text col">
-        <img src="img/logo1.png" width="60" heigth="120">
-        <b>SisCMnt</b>
-        <img src="img/matbel.png" width="60" heigth="150">
-    </div>
-      </div>
-    </div>
-  </div>
-</header>
+  <iframe src="./src/actions/header.php" name="logo" scrolling = "no" width="100%" height="145px"></iframe>
 
 <div class="container">
         <?php if (!empty($_GET['msgErro'])) { ?>
@@ -32,12 +21,13 @@
         <?php echo $_GET['msgSucesso']; ?>
           </div>
         <?php } ?>
-      </div>
+</div>
 
     <div class="d-flex justify-content-center">
                   
           <form action="./src/actions/processa_login.php" method="post">
-                            
+            
+        </br>
             <h1 class="h3 mb-3 fw-normal">Login</h1>
 
             <div class="login">
@@ -59,10 +49,15 @@
               </div>
 
               <button type="submit" name="enviarDados" class="btn btn-primary">Entrar</button>
-              <a href="./src/pages/user/cad_usuario.php" class="btn btn-warning">Cadastrar-se</a>
 
+            </div>
           </form>
- 
-    </div>
+
+     </div>
+
+       
   </body>
+
+  <iframe src="./src/actions/footer.php" name="footer" scrolling = "no" width="100%" height="148px">
+
 </html>

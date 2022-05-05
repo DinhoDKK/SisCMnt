@@ -1,23 +1,21 @@
+<!DOCTYPE html>
+
 <link href="../../css/style.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="../../bootstrap/js/bootstrap.bundle.min.js" type="text/javascript"></script>
 
     <div class="carrousel">
         <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
 
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="../../img/slide1.jpg">
+                    <img src="../../img/slide1.jpg" class="d-block w-100" alt="image1">
                 </div>
                 <div class="carousel-item active">
-                    <img src="../../img/slide2.jpg">
+                    <img src="../../img/slide2.jpg" class="d-block w-100" alt="image1">
                 </div>
                 <div class="carousel-item active">
-                    <img src="../../img/slide3.jpg">
+                    <img src="../../img/slide3.jpg" class="d-block w-100" alt="image1">
                 </div>
             </div>
 

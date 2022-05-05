@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" 
-  rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
-   crossorigin="anonymous">
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
+  <link rel="stylesheet" href="../../../bootstrap/css/bootstrap.min.css">
   <link href="../../css/menu_lateal.css" rel="stylesheet">
   </head>
   <script>
@@ -13,6 +9,9 @@
       $( document ).tooltip();
     } );
   </script>
+  <style>
+    .image {margin: auto; text-align: center; height: 150px;}
+    </style>
   <body>
       
     <div>  
@@ -23,6 +22,12 @@
               <div class="menu-list">
         
                   <ul id="menu-content" class="menu-content collapse out">
+                  <li>
+                     <div class="image">
+                        <img src="../../img/logo1.png" width="60" heigth="120">
+                     </div>
+                    
+                    </li>
                       <li>
                         <a href="../actions/inicio.php" target="mainFrame"><i class="fa fa-dashboard fa-lg"></i> Inicio </a>
                       </li>
