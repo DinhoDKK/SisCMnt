@@ -82,7 +82,7 @@ if (!empty($_GET['meus_materiais']) && $_GET['meus_materiais'] == 1) {
 
          <!-- Aqui que será montada a tabela com a relação de materiais!! -->
       <div class="tabelas">
-        <table class="table table-striped">
+        <table class="table table-sm table-striped text-break table-bordered">
           <thead class="table-dark">
             <tr>
               <th scope="col">#</th>

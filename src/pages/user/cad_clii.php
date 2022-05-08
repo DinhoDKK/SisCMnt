@@ -41,7 +41,7 @@ die();
               <?php } ?>
             </div>
     
-    <form id="form" name="form" class="form" action="../../actions/processa_matclii.php" method="POST" onsubmit="">
+    <form id="form" name="form" class="form" action="processa_matclii.php" method="POST" onsubmit="">
         <div class="tab-content">
           <div class="tab-pane active div-tab" id="cad-clii" role="tabpanel">
           
