@@ -52,6 +52,7 @@ $materiais = array();
 <head>
   <title>SisCMnt</title>
   <link rel="stylesheet" href="../../../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../css/style.css">
 
 <body>
   
@@ -72,9 +73,9 @@ $materiais = array();
     <?php if (!empty($materiais)) { ?>
 
          <!-- Aqui que será montada a tabela com a relação de materiais!! -->
-      <div class="container-sm">
-        <table class="table table-striped table-sm table-responsive">
-          <thead class="table-success">
+         <div class="tabelas">
+        <table class="table table-sm table-striped">
+          <thead class="table-dark">
             <tr>
               <th scope="col">#</th>
               <th scope="col">Nº da Ficha</th>

@@ -84,9 +84,9 @@ if (!empty($_GET['meus_materiais']) && $_GET['meus_materiais'] == 1) {
     <?php if (!empty($materiais)) { ?>
 
          <!-- Aqui que será montada a tabela com a relação de materiais!! -->
-      <div class="container">
+         <div class="tabelas">
         <table class="table table-striped">
-          <thead>
+          <thead class="table-dark">
             <tr>
               <th scope="col">#</th>
               <th scope="col">Nº da Ficha</th>
@@ -97,6 +97,7 @@ if (!empty($_GET['meus_materiais']) && $_GET['meus_materiais'] == 1) {
               <th scope="col">Data (Início da indisponibilidade)</th>
               <th scope="col">Motivo da indisponibilidade</th>
               <th scope="col">Em manutenção</th>
+              <th scope="col"></th>
             </tr>
           </thead>
           <tbody>

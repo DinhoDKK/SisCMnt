@@ -92,6 +92,7 @@ if (!empty($_GET['meus_materiais']) && $_GET['meus_materiais'] == 1) {
               <th scope="col">Nomenclatura</th>
               <th scope="col">Disponibilidade</th>
               <th scope="col">Motivo da descarga</th>
+              <th scope="col"></th>
             </tr>
           </thead>
           <tbody>

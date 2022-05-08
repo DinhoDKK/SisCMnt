@@ -24,9 +24,11 @@ die();
   <link rel="stylesheet" href="../../../bootstrap/css/bootstrap.min.css">
 </head>
 
-<body>
+<body>  
+  <div class="container text-center">
         <form id="form" name="form" class="form" action="ver_mat_cl.php" method="POST" onsubmit="">
-                <div class="col-md-6" style="text-align: center;">
+        
+                <div class="col-md-6">
                     <label for="perfil" class="form-label">Escolha a classe</label>
                     <select id="escolhaclasse" name="escolhaclasse" class="form-select">
                     <option selected></option>
@@ -36,10 +38,11 @@ die();
                     </select>
                 </div>
         
-                <div class="col-md-10 btn">
+                <div class="col-md-4 btn">
             <button type="submit" class="btn btn-primary">Pesquisar</button>
-            </div>
+          </div>
 
         </form>
+  </div>
 </body>
 </html>
